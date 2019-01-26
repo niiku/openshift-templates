@@ -40,7 +40,7 @@ objects:
             command:
               - "/bin/bash"
               - "-c"
-              - "curl -o /tmp/nexus-functions -s https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/scripts/nexus-functions; source /tmp/nexus-functions; add_nexus3_redhat_repos admin admin123 http://${SERVICE_NAME}:8081"
+              - "curl -o /tmp/nexus-functions -s https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/scripts/nexus-functions; source /tmp/nexus-functions; add_nexus3_redhat_repos ${NEXUS_ADMIN_USERNAME} ${NEXUS_ADMIN_PASSWORD} http://${SERVICE_NAME}:8081"
       type: Recreate
     template:
       metadata:
@@ -154,7 +154,15 @@ parameters:
 - displayName: Sonatype Nexus version
   name: NEXUS_VERSION
   required: true
-  value: 3.6.0
+  value: 3.15.1
+ - displayName: Sonatype Nexus version
+  name: NEXUS_ADMIN_USERNAME
+  required: true
+  value: admin
+- displayName: Sonatype Nexus version
+  name: NEXUS_ADMIN_PASSWORD
+  required: true
+  value: admin123
 - description: Volume space available for Sonatype Nexus e.g. 512Mi, 2Gi
   displayName: Volume Space for Nexus
   name: VOLUME_CAPACITY
