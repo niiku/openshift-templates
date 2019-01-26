@@ -40,7 +40,7 @@ objects:
             command:
               - "/bin/bash"
               - "-c"
-              - "curl -o /tmp/nexus-functions -s https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/scripts/nexus-functions; source /tmp/nexus-functions; add_nexus3_redhat_repos ${NEXUS_ADMIN_USERNAME} ${NEXUS_ADMIN_PASSWORD} http://${SERVICE_NAME}:8081"
+              - "curl -o /tmp/nexus-functions -s https://raw.githubusercontent.com/niiku/openshift-templates/master/nexus/scripts/nexus-functions; source /tmp/nexus-functions; add_nexus3_redhat_repos ${NEXUS_ADMIN_USERNAME} ${NEXUS_ADMIN_PASSWORD} http://${SERVICE_NAME}:8081"
       type: Recreate
     template:
       metadata:
@@ -112,7 +112,7 @@ objects:
       app: ${SERVICE_NAME}
     name: ${SERVICE_NAME}
   spec:
-    ports:
+    ports:sdxxxxxxxAAAAAAAAAAAAAAAAAAA<<<<<<<<<<<<<<<<<<<<
     - name: 8081-tcp
       port: 8081
       protocol: TCP
