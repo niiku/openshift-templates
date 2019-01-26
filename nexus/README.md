@@ -26,5 +26,5 @@ oc new-app nexus3-persistent
 
 # Deploy Specific Version
 ```
-oc new-app nexus3-persistent -p NEXUS_VERSION=3.5.2
+oc new-app nexus3-persistent -p NEXUS_VERSION=3.15.1
 ```
