@@ -7,6 +7,8 @@ metadata:
   annotations:
     description: Sonatype Nexus 3 persistent template
     tags: ci,nexus
+    iconClass: pficon pficon-build
+    openshift.io/display-name: Nexus 3
 objects:
 - apiVersion: v1
   kind: ImageStream
@@ -112,7 +114,7 @@ objects:
       app: ${SERVICE_NAME}
     name: ${SERVICE_NAME}
   spec:
-    ports:sdxxxxxxxAAAAAAAAAAAAAAAAAAA<<<<<<<<<<<<<<<<<<<<
+    ports:
     - name: 8081-tcp
       port: 8081
       protocol: TCP
@@ -155,7 +157,7 @@ parameters:
   name: NEXUS_VERSION
   required: true
   value: 3.15.1
- - displayName: Sonatype Nexus version
+- displayName: Sonatype Nexus version
   name: NEXUS_ADMIN_USERNAME
   required: true
   value: admin
